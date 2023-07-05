@@ -1,0 +1,23 @@
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(
+  (
+    // custom
+    // 背景固定
+    "bg-attachment-fixed":(
+      property: background-attachment,
+      class: "bg-attachment",
+      values: fixed
+    ),
+
+    // 多的部分裁切掉不讓圖片變形
+    "object-fit-cover":(
+      property: object-fit,
+      class: "object-fit",
+      values: cover
+    )
+  ),
+  $utilities
+);
